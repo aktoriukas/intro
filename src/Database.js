@@ -1,23 +1,31 @@
-import React, { Component } from 'react'
+import Github from './icons/github.png';
+import Email from './icons/email.png';
+import LinkedIn from './icons/linkedin.png';
+import React from 'react';
+
 
 class Database  {
     get projects () {
         return [
             {
                 id: 1,
-                title: 'Jedmap'
+                title: 'Jedmap',
+                ref: 'jedmap'
             },
             {
                 id: 2,
-                title: 'Brand Guidlines'
+                title: 'Brand Guidlines',
+                ref: 'guidlines'
             },
             {
                 id: 3,
-                title: 'Invest African Guide'
+                title: 'Invest African Guide',
+                ref: 'invest'
             },
             {
                 id: 4,
-                title: 'Drops bar'
+                title: 'Drops bar',
+                ref: 'drops'
             }
         ];
     }
@@ -42,6 +50,31 @@ class Database  {
             {
                 id: 5,
                 title: 'PHP'
+            }
+        ]
+    }
+    get socialMedia () {
+        return [
+            {
+                id:1,
+                title: 'git-hub',
+                url: 'https://github.com/aktoriukas',
+                logo: Github
+
+            },
+            {
+                id:2,
+                title: 'email',
+                url: 'https://github.com/aktoriukas',
+                logo: Email
+
+            },
+            {
+                id:3,
+                title: 'linkedIn',
+                url: 'https://github.com/aktoriukas',
+                logo: LinkedIn
+
             }
         ]
     }

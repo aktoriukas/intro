@@ -2,6 +2,20 @@ import React, { Component } from 'react'
 
 export default class Right extends Component {
     
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             popUp: false
+        }
+    }
+
+    popUp (pop) {
+        this.setState({
+            popUp:true
+        })
+    }
+    
 
     render() {
 
@@ -14,6 +28,7 @@ export default class Right extends Component {
                         <li
                             key={project.id}
                             className='project'
+                            onClick={() => this.popUp(project)}
                         >{project.title}</li>
                     ))}
                 </ul>

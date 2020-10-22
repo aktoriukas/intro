@@ -30,6 +30,18 @@ ul, ol ,li, p {
     .left {
         flex: 0 1 25%;
         text-align: left;
+        .skills {
+            .skill {
+                &:after {
+                    left: -50rem;
+                }
+                &:hover {
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
+        }
     }
     .center {
         flex: 0 1 50%;
@@ -48,18 +60,51 @@ ul, ol ,li, p {
             }
             .about {
                 flex: 0 1 15%;
+                font-weight: $light;
+                padding: 4rem 0 0 ;
             }
             .footer {
                 flex: 0 1 25%;
                 display: flex;
                 flex-direction: column-reverse;
                 padding-bottom: 2rem;
+
+                .made-by {
+                    font-size: .8rem;
+                    font-weight: $verylight;
+                }
+                .social-media {
+                    display: flex;
+                    flex-direction: row;
+                    margin:0  auto;
+                    .logo {
+                        width: 1.5rem;
+                        padding: 0 .5rem;
+                        opacity: 0.7;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }    
+                }
             }
         }
     }
     .right {
         flex: 0 1 25%;
         text-align: right;
+
+        .projects{
+            .project{
+                &:after {
+                    right: -50rem;
+                }
+                &:hover {
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+        }
 
     }
     .right,
@@ -73,9 +118,22 @@ ul, ol ,li, p {
 
             .project,
             .skill {
-                margin-bottom: 5rem;
+                padding-bottom: 5rem;
                 font-weight: $verylight;
                 font-size: 2rem;
+                display: inline;
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    content: '';
+                    transition: 0.2s ease-in-out;
+                    position: absolute;
+                    bottom: 4.5rem;
+                    width: 50%;
+                    height: 1px;
+                    background-color: $black-light;
+                }
             }
         }
     }
