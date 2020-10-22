@@ -1,0 +1,82 @@
+@import './sass/cube';
+@import './sass/mixin';
+@import './sass/variables';
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: $commissioner;
+    font-size: 16px;
+}
+ul, ol ,li, p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    .main {
+        margin: 1rem;
+        height: 100%;
+    }
+
+    .left {
+        flex: 0 1 25%;
+        text-align: left;
+    }
+    .center {
+        flex: 0 1 50%;
+        text-align: center;
+
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .top {
+                flex: 0 1 50%;
+            }
+            #wrapD3Cube {
+                flex: 0 1 10%;
+            }
+            .about {
+                flex: 0 1 15%;
+            }
+            .footer {
+                flex: 0 1 25%;
+                display: flex;
+                flex-direction: column-reverse;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+    .right {
+        flex: 0 1 25%;
+        text-align: right;
+
+    }
+    .right,
+    .left {
+        .projects,
+        .skills {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            .project,
+            .skill {
+                margin-bottom: 5rem;
+                font-weight: $verylight;
+                font-size: 2rem;
+            }
+        }
+    }
+}
