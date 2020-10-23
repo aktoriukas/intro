@@ -16,6 +16,10 @@ ul, ol ,li, p {
     margin: 0;
     list-style: none;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 .App {
     display: flex;
@@ -94,6 +98,12 @@ ul, ol ,li, p {
         text-align: right;
 
         .projects{
+            &.dimmed {
+                .project{
+                    transition: 0.5s ease-in-out;
+                    opacity: 0.2;    
+                }
+            }
             .project{
                 &:after {
                     right: -50rem;
@@ -101,6 +111,89 @@ ul, ol ,li, p {
                 &:hover {
                     &:after {
                         right: 0;
+                    }
+                }
+            }
+        }
+        .pop-up {
+            position: absolute;
+            right: 0;
+            opacity: 1;
+            height: 25rem;
+            width: 15rem;
+            border: 1px solid $cube-colour;
+            animation: slideRight 1s;
+            padding: 1rem;
+            background-color: $white;
+            text-align: left;
+
+            .button-x {
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    span {
+                        &:first-child {
+                            transform: rotate(415deg)
+                        }
+                        &:last-child {
+                            transform: rotate(315deg);
+                        }    
+                    }
+                }
+
+                span {
+                    &:first-child {
+                        transform: rotate(45deg)
+                    }
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
+                    transition: 1s ease-in-out;
+                    transform-origin: center;
+                    position: absolute;
+                    top:.9rem;
+                    width: 2rem;
+                    height: 1px;
+                    background-color: $cube-colour;
+                    border-radius: 20rem;
+                }
+            }
+
+            .website {
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                font-size: 1rem;
+                font-weight: $light;
+            }
+
+            .title {
+                font-size: 2rem;
+                font-weight: $light;
+                margin: .5rem 0 1rem;
+            }
+            .task-list {
+                padding-left: 1rem;
+
+                .task {
+                    position: relative;
+                    padding-bottom: 1rem;
+                    font-size: 1.2rem;
+                    font-weight: $light;
+                    &:before {
+                        content: '';
+                        width: .3rem;
+                        height: .3rem;
+                        border:1px solid $cube-colour;
+                        position: absolute;
+                        left: -.9rem;
+                        top: .5rem;
+                        transform: rotate(25deg);
                     }
                 }
             }

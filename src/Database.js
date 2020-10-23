@@ -10,22 +10,30 @@ class Database  {
             {
                 id: 1,
                 title: 'Jedmap',
-                ref: 'jedmap'
+                ref: 'jedmap',
+                info: 'Working on Ipad application controller / React / Sass ',
+                url: 'https://pad.jedmap.campus.goodcaesar.org/pad-standalone.html'
             },
             {
                 id: 2,
                 title: 'Brand Guidlines',
-                ref: 'guidlines'
+                ref: 'guidlines',
+                info: 'Creating elements collections website / Sass / JavaScript / Html',
+                url: 'https://isdb-brand.campus.goodcaesar.org/'
             },
             {
                 id: 3,
                 title: 'Invest African Guide',
-                ref: 'invest'
+                ref: 'invest',
+                info: 'Redisigning website from the ground up / Sass / Html',
+                url: 'https://investmentguide.africa/'
             },
             {
                 id: 4,
                 title: 'Drops bar',
-                ref: 'drops'
+                ref: 'drops',
+                info: 'Website from the scratch / Html / Css',
+                url: false
             }
         ];
     }

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PopUp from './PopUp';
 
 export default class Right extends Component {
     
@@ -12,7 +13,13 @@ export default class Right extends Component {
 
     popUp (pop) {
         this.setState({
-            popUp:true
+            popUp:true,
+            project: pop
+        })
+    }
+    closepopUp () {
+        this.setState({
+            popUp: false
         })
     }
     
@@ -20,10 +27,11 @@ export default class Right extends Component {
     render() {
 
         const {Database} = this.props;
+        const projectClasses = this.state.popUp ? 'projects dimmed' : 'projects';
 
         return (
             <div className='right main'>
-                <ul className='projects'>
+                <ul className={projectClasses}>
                     {Database.projects.map((project) => (
                         <li
                             key={project.id}
@@ -31,6 +39,14 @@ export default class Right extends Component {
                             onClick={() => this.popUp(project)}
                         >{project.title}</li>
                     ))}
+                    {this.state.popUp ?
+                    <PopUp
+                        project={this.state.project}
+                        close={this.closepopUp.bind(this)}
+                    />
+                    :
+                    ''
+                    }
                 </ul>
             </div>
         )
