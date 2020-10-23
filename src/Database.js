@@ -12,13 +12,13 @@ class Database  {
                 title: 'Jedmap',
                 ref: 'jedmap',
                 info: 'Working on Ipad application controller / React / Sass ',
-                url: 'https://pad.jedmap.campus.goodcaesar.org/pad-standalone.html'
+                url: false
             },
             {
                 id: 2,
                 title: 'Brand Guidlines',
                 ref: 'guidlines',
-                info: 'Creating elements collections website / Sass / JavaScript / Html',
+                info: 'Creating elements collections website / Sass / JavaScript / Html / Twig',
                 url: 'https://isdb-brand.campus.goodcaesar.org/'
             },
             {
@@ -88,7 +88,7 @@ class Database  {
     }
     get about () {
         return (
-            'Passionate, versatile, people-oriented professional. With more than eight years of experience in all aspects of management, leadership and service. Strong team-building skills and excellent problem-solving abilities. Good understanding and controlling sales and stock. Experienced in organizing and managing big events. Able to work creatively and efficiently whilst meeting the highest standards of presentation and attention to detail.'
+            'Passionate and thirsty for knowledge. Excellent in problem-solving.Working creatively and efficiently whilst meeting the highest standards and attention to detail.'
         )
     }
 }

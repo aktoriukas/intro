@@ -10,6 +10,13 @@ html, body, #root {
     height: 100%;
     font-family: $commissioner;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+    @media (max-width: 576px) {
+        font-size: 24px;
+    }
 }
 ul, ol ,li, p {
     padding: 0;
@@ -25,6 +32,14 @@ a {
     display: flex;
     flex-direction: row;
     height: 100%;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(./img/wall.jpg);
+        opacity: 0.6;
+    }
 
     .main {
         margin: 1rem;
@@ -64,8 +79,12 @@ a {
             }
             .about {
                 flex: 0 1 15%;
-                font-weight: $light;
                 padding: 4rem 0 0 ;
+                max-width: 14rem;
+                margin: 0 auto;
+                line-height: 1.5;
+                font-size: 1.15rem;
+                font-weight: $light;
             }
             .footer {
                 flex: 0 1 25%;
@@ -101,7 +120,7 @@ a {
             &.dimmed {
                 .project{
                     transition: 0.5s ease-in-out;
-                    opacity: 0.2;    
+                    opacity: 0.1;    
                 }
             }
             .project{
@@ -124,8 +143,9 @@ a {
             border: 1px solid $cube-colour;
             animation: slideRight 1s;
             padding: 1rem;
-            background-color: $white;
+            opacity: 1;
             text-align: left;
+
 
             .button-x {
                 position: absolute;
@@ -170,6 +190,7 @@ a {
                 left: 1rem;
                 font-size: 1rem;
                 font-weight: $light;
+                max-width: 8rem;
             }
 
             .title {
@@ -208,6 +229,7 @@ a {
             flex-direction: column;
             justify-content: center;
             height: 100%;
+            color: $black;
 
             .project,
             .skill {
@@ -217,6 +239,9 @@ a {
                 display: inline;
                 position: relative;
                 cursor: pointer;
+                @media (max-height: 768px) {
+                    padding-bottom: 2rem;
+                }            
 
                 &:after {
                     content: '';
