@@ -298,5 +298,15 @@ a {
         width: 50%;
         height: 1px;
         background-color: #0000004f; }
+        @media (max-height: 768px) {
+          .App .right .projects .project:after,
+          .App .right .projects .skill:after,
+          .App .right .skills .project:after,
+          .App .right .skills .skill:after,
+          .App .left .projects .project:after,
+          .App .left .projects .skill:after,
+          .App .left .skills .project:after,
+          .App .left .skills .skill:after {
+            bottom: 1.5rem; } }
 
 /*# sourceMappingURL=index.css.map */

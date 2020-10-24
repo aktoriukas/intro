@@ -251,6 +251,9 @@ a {
                     width: 50%;
                     height: 1px;
                     background-color: $black-light;
+                    @media (max-height: 768px) {
+                        bottom: 1.5rem;
+                    }                
                 }
             }
         }
