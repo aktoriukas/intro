@@ -38,7 +38,7 @@ a {
         width: 100%;
         height: 100%;
         background: url(./img/wall.jpg);
-        opacity: 0.6;
+        opacity: 0.2;
     }
 
     .main {
@@ -80,11 +80,12 @@ a {
             .about {
                 flex: 0 1 15%;
                 padding: 4rem 0 0 ;
-                max-width: 14rem;
+                max-width: 24rem;
                 margin: 0 auto;
                 line-height: 1.5;
                 font-size: 1.15rem;
-                font-weight: $light;
+                font-weight: $regular;
+                color: $cube-colour;
             }
             .footer {
                 flex: 0 1 25%;
@@ -119,8 +120,7 @@ a {
         .projects{
             &.dimmed {
                 .project{
-                    transition: 0.5s ease-in-out;
-                    opacity: 0.1;    
+                    opacity: 0.05;    
                 }
             }
             .project{
@@ -141,11 +141,15 @@ a {
             height: 25rem;
             width: 15rem;
             border: 1px solid $cube-colour;
-            animation: slideRight 1s;
+            animation: appear 1s;
             padding: 1rem;
             opacity: 1;
             text-align: left;
-
+            box-shadow: 0 0 .4rem $cube-colour;
+            transition: 1.7s;
+            &.fade {
+                opacity: 0;
+            }
 
             .button-x {
                 position: absolute;
@@ -191,6 +195,9 @@ a {
                 font-size: 1rem;
                 font-weight: $light;
                 max-width: 8rem;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
 
             .title {
@@ -233,11 +240,13 @@ a {
 
             .project,
             .skill {
+                transition: 0.1s ease-in-out;
                 padding-bottom: 5rem;
-                font-weight: $verylight;
+                font-weight: $medium;
                 font-size: 2rem;
                 display: inline;
                 position: relative;
+                color: $cube-colour;
                 cursor: pointer;
                 @media (max-height: 768px) {
                     padding-bottom: 2rem;

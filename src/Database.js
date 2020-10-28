@@ -11,28 +11,35 @@ class Database  {
                 id: 1,
                 title: 'Jedmap',
                 ref: 'jedmap',
-                info: 'Working on Ipad application controller / React / Sass ',
+                info: 'Ipad application / React / Sass ',
                 url: false
             },
             {
                 id: 2,
-                title: 'Brand Guidlines',
-                ref: 'guidlines',
-                info: 'Creating elements collections website / Sass / JavaScript / Html / Twig',
-                url: 'https://isdb-brand.campus.goodcaesar.org/'
+                title: 'Isdb Development bank',
+                ref: 'isdb',
+                info: 'Support on adding features / JavaScript / Sass',
+                url: 'https://www.isdb.org/'
             },
             {
                 id: 3,
-                title: 'Invest African Guide',
-                ref: 'invest',
-                info: 'Redisigning website from the ground up / Sass / Html',
-                url: 'https://investmentguide.africa/'
+                title: 'Brand Guidlines',
+                ref: 'guidlines',
+                info: 'Collection of Elements / Sass / JavaScript / Twig',
+                url: 'https://isdb-brand.campus.goodcaesar.org/'
             },
             {
                 id: 4,
+                title: 'Invest African Guide',
+                ref: 'invest',
+                info: 'Redesigning from the ground up / Sass / Html',
+                url: 'https://investmentguide.africa/'
+            },
+            {
+                id: 5,
                 title: 'Drops bar',
                 ref: 'drops',
-                info: 'Website from the scratch / Html / Css',
+                info: 'Static bar website / Html / Css',
                 url: false
             }
         ];
@@ -88,7 +95,7 @@ class Database  {
     }
     get about () {
         return (
-            'Passionate and thirsty for knowledge. Excellent in problem-solving.Working creatively and efficiently whilst meeting the highest standards and attention to detail.'
+            'Passionate and thirsty for knowledge / Excellent in problem-solving / Working creatively and efficiently whilst meeting the highest standards and attention to detail.'
         )
     }
 }

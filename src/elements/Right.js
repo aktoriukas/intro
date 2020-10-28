@@ -18,9 +18,13 @@ export default class Right extends Component {
         })
     }
     closepopUp () {
-        this.setState({
-            popUp: false
-        })
+        let pop = document.getElementsByClassName('pop-up');
+        pop[0].classList.add('fade');
+        setTimeout(() => {
+            this.setState({
+                popUp: false
+            })
+        },500)
     }
     
 
