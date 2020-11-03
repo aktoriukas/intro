@@ -26,6 +26,7 @@ ul, ol ,li, p {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .App {
@@ -47,7 +48,7 @@ a {
     }
 
     .left {
-        flex: 0 1 25%;
+        flex: 0 1 30%;
         text-align: left;
         .skills {
             .skill {
@@ -63,7 +64,7 @@ a {
         }
     }
     .center {
-        flex: 0 1 50%;
+        flex: 0 1 40%;
         text-align: center;
 
         .center-container {
@@ -101,20 +102,28 @@ a {
                     display: flex;
                     flex-direction: row;
                     margin:0  auto;
-                    .logo {
-                        width: 1.5rem;
-                        padding: 0 .5rem;
-                        opacity: 0.7;
-                        &:hover {
-                            opacity: 1;
-                        }
-                    }    
+                    cursor: pointer;
+                    z-index: 5;
+
+                    a {
+                        cursor: pointer;
+                        .logo {
+                            width: 1.7rem;
+                            padding: 0 .5rem;
+                            opacity: 0.7;
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }            
+                    }
+                    
                 }
             }
         }
     }
     .right {
-        flex: 0 1 25%;
+        flex: 0 1 30%;
         text-align: right;
 
         .projects{
@@ -145,7 +154,7 @@ a {
             padding: 1rem;
             opacity: 1;
             text-align: left;
-            box-shadow: 0 0 .4rem $cube-colour;
+            box-shadow: 0 0 .4rem $cube-colour, 0 0 5rem $cube-colour-clear;
             transition: 1.7s;
             &.fade {
                 opacity: 0;
@@ -242,7 +251,7 @@ a {
             .skill {
                 transition: 0.1s ease-in-out;
                 padding-bottom: 5rem;
-                font-weight: $medium;
+                font-weight: $regular;
                 font-size: 2rem;
                 display: inline;
                 position: relative;

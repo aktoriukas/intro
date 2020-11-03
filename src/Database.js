@@ -80,14 +80,14 @@ class Database  {
             {
                 id:2,
                 title: 'email',
-                url: 'https://github.com/aktoriukas',
+                url: 'mailto: gediminas.strumila@gmail.com',
                 logo: Email
 
             },
             {
                 id:3,
                 title: 'linkedIn',
-                url: 'https://github.com/aktoriukas',
+                url: 'https://linkedin.com/in/strumila/',
                 logo: LinkedIn
 
             }

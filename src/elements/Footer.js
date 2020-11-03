@@ -5,16 +5,17 @@ export default class Footer extends Component {
     render() {
         return (
             <div className='footer'>
+
                 <div className='made-by'>Copyright © 2020—2020. G.S </div>
-                <ul className='social-media'>
+                <div className='social-media'>
+
                     {Database.socialMedia.map((media) => (
-                        <li key={media.id}>
-                            <a href={media.url}>
-                                <img alt={media.title} className='logo' src={media.logo}></img>
-                            </a>
-                        </li>
+
+                        <a key={media.id} href={media.url} target='_blank'>
+                            <img alt={media.title} className='logo' src={media.logo}></img>
+                        </a>
                     ))}
-                </ul>
+                </div>
             </div>
         )
     }
