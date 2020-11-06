@@ -54,23 +54,28 @@ class Database  {
         return [
             {
                 id: 1,
-                title: 'React'
+                title: 'React',
+                level: 50
             },
             {
                 id: 2,
-                title: 'Sass'
+                title: 'Sass',
+                level: 90
             },
             {
                 id: 3,
-                title: 'Vanilla JS'
+                title: 'Vanilla JS',
+                level: 60
             },
             {
                 id: 4,
-                title: 'Html'
+                title: 'Html',
+                level: 90
             },
             {
                 id: 5,
-                title: 'PHP'
+                title: 'PHP',
+                level: 20
             }
         ]
     }

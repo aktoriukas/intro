@@ -290,6 +290,51 @@ a {
       position: relative;
       color: rgba(0, 0, 0, 0.5);
       cursor: pointer; }
+      .App .right .projects .project .level-container,
+      .App .right .projects .skill .level-container,
+      .App .right .skills .project .level-container,
+      .App .right .skills .skill .level-container,
+      .App .left .projects .project .level-container,
+      .App .left .projects .skill .level-container,
+      .App .left .skills .project .level-container,
+      .App .left .skills .skill .level-container {
+        position: relative;
+        display: flex;
+        flex-direction: row; }
+        .App .right .projects .project .level-container .level,
+        .App .right .projects .skill .level-container .level,
+        .App .right .skills .project .level-container .level,
+        .App .right .skills .skill .level-container .level,
+        .App .left .projects .project .level-container .level,
+        .App .left .projects .skill .level-container .level,
+        .App .left .skills .project .level-container .level,
+        .App .left .skills .skill .level-container .level {
+          height: .5rem;
+          background: #762323;
+          border-radius: .5rem;
+          opacity: 0.3;
+          transition: width 2s ease; }
+        .App .right .projects .project .level-container .level-nr,
+        .App .right .projects .skill .level-container .level-nr,
+        .App .right .skills .project .level-container .level-nr,
+        .App .right .skills .skill .level-container .level-nr,
+        .App .left .projects .project .level-container .level-nr,
+        .App .left .projects .skill .level-container .level-nr,
+        .App .left .skills .project .level-container .level-nr,
+        .App .left .skills .skill .level-container .level-nr {
+          font-size: .7rem;
+          padding-left: .5rem;
+          color: inherit;
+          transition: opacity 1.5s ease; }
+          .App .right .projects .project .level-container .level-nr:after,
+          .App .right .projects .skill .level-container .level-nr:after,
+          .App .right .skills .project .level-container .level-nr:after,
+          .App .right .skills .skill .level-container .level-nr:after,
+          .App .left .projects .project .level-container .level-nr:after,
+          .App .left .projects .skill .level-container .level-nr:after,
+          .App .left .skills .project .level-container .level-nr:after,
+          .App .left .skills .skill .level-container .level-nr:after {
+            content: '%'; }
       @media (max-height: 768px) {
         .App .right .projects .project,
         .App .right .projects .skill,
@@ -309,5 +354,14 @@ a {
       .App .left .skills .project:hover,
       .App .left .skills .skill:hover {
         color: #762323; }
+        .App .right .projects .project:hover .level-container .level-nr,
+        .App .right .projects .skill:hover .level-container .level-nr,
+        .App .right .skills .project:hover .level-container .level-nr,
+        .App .right .skills .skill:hover .level-container .level-nr,
+        .App .left .projects .project:hover .level-container .level-nr,
+        .App .left .projects .skill:hover .level-container .level-nr,
+        .App .left .skills .project:hover .level-container .level-nr,
+        .App .left .skills .skill:hover .level-container .level-nr {
+          color: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=index.css.map */

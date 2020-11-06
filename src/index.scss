@@ -248,11 +248,37 @@ a {
                 position: relative;
                 color: $cube-colour;
                 cursor: pointer;
+
+                .level-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    .level {
+                        height: .5rem;
+                        background: $grey-red;
+                        border-radius: .5rem;
+                        opacity: 0.3;
+                        transition: width 2s ease;
+                    }
+                    .level-nr {
+                        font-size: .7rem;
+                        padding-left: .5rem;
+                        color: inherit;
+                        transition: opacity 1.5s ease;
+                        &:after {
+                            content: '%';
+                        }
+                    }
+                }
+
                 @media (max-height: 768px) {
                     padding-bottom: 2rem;
                 }   
                 &:hover {
                     color: $grey-red;
+                    .level-container .level-nr{
+                        color: $cube-colour;
+                    }
                 }         
             }
         }
