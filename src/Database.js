@@ -1,7 +1,7 @@
 import Github from './icons/github.png';
 import Email from './icons/email.png';
 import LinkedIn from './icons/linkedin.png';
-import React from 'react';
+// import React from 'react';
 
 
 class Database  {
@@ -106,4 +106,4 @@ class Database  {
     }
 }
 
-export default new Database;
+export default new Database ();

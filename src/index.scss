@@ -10,13 +10,8 @@ html, body, #root {
     height: 100%;
     font-family: $commissioner;
     font-size: 16px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    @media (max-width: 768px) {
-        font-size: 18px;
-    }
-    @media (max-width: 576px) {
-        font-size: 24px;
-    }
 }
 ul, ol ,li, p {
     padding: 0;
@@ -33,6 +28,8 @@ a {
     display: flex;
     flex-direction: row;
     height: 100%;
+    position: relative;
+    overflow: hidden;
     &:before {
         content: '';
         position: absolute;
@@ -52,13 +49,7 @@ a {
         text-align: left;
         .skills {
             .skill {
-                &:after {
-                    left: -50rem;
-                }
                 &:hover {
-                    &:after {
-                        left: 0;
-                    }
                 }
             }
         }
@@ -125,6 +116,7 @@ a {
     .right {
         flex: 0 1 30%;
         text-align: right;
+        overflow: hidden;
 
         .projects{
             &.dimmed {
@@ -133,19 +125,13 @@ a {
                 }
             }
             .project{
-                &:after {
-                    right: -50rem;
-                }
                 &:hover {
-                    &:after {
-                        right: 0;
-                    }
                 }
             }
         }
         .pop-up {
             position: absolute;
-            right: 0;
+            right: 2rem;
             opacity: 1;
             height: 25rem;
             width: 15rem;
@@ -157,6 +143,7 @@ a {
             box-shadow: 0 0 .4rem $cube-colour, 0 0 5rem $cube-colour-clear;
             transition: 1.7s;
             &.fade {
+                right: -100rem;
                 opacity: 0;
             }
 
@@ -259,20 +246,10 @@ a {
                 cursor: pointer;
                 @media (max-height: 768px) {
                     padding-bottom: 2rem;
-                }            
-
-                &:after {
-                    content: '';
-                    transition: 0.2s ease-in-out;
-                    position: absolute;
-                    bottom: 4.5rem;
-                    width: 50%;
-                    height: 1px;
-                    background-color: $black-light;
-                    @media (max-height: 768px) {
-                        bottom: 1.5rem;
-                    }                
-                }
+                }   
+                &:hover {
+                    color: $grey-red;
+                }         
             }
         }
     }
