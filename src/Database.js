@@ -8,19 +8,25 @@ class Database  {
     get projects () {
         return [
             {
-                id: 1,
+                id: 6,
+                title: 'rota_me',
+                ref: 'rotaMe',
+                info: 'Rota template application / React / Sass'
+            },
+            {
+                id: 5,
                 title: 'Jedmap',
                 ref: 'jedmap',
                 info: 'Ipad application / React / Sass ',
                 url: false
             },
-            {
-                id: 2,
-                title: 'Isdb Development bank',
-                ref: 'isdb',
-                info: 'Support on adding features / JavaScript / Sass',
-                url: 'https://www.isdb.org/'
-            },
+            // {
+            //     id: 2,
+            //     title: 'Isdb Development bank',
+            //     ref: 'isdb',
+            //     info: 'Support on adding features / JavaScript / Sass',
+            //     url: 'https://www.isdb.org/'
+            // },
             {
                 id: 3,
                 title: 'Brand Guidlines',
@@ -29,14 +35,14 @@ class Database  {
                 url: 'https://isdb-brand.campus.goodcaesar.org/'
             },
             {
-                id: 4,
+                id: 2,
                 title: 'Invest African Guide',
                 ref: 'invest',
                 info: 'Redesigning from the ground up / Sass / Html',
                 url: 'https://investmentguide.africa/'
             },
             {
-                id: 5,
+                id: 1,
                 title: 'Drops bar',
                 ref: 'drops',
                 info: 'Static bar website / Html / Css',
