@@ -27,8 +27,8 @@
   position: absolute;
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
-  width: 105px;
-  height: 105px;
+  width: 109px;
+  height: 109px;
   float: left;
   overflow: hidden;
   opacity: 0.5; }
@@ -88,7 +88,7 @@
   0% {
     transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg); }
   50% {
-    transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg); }
+    transform: rotateX(-100deg) rotateY(-128deg) rotateZ(180deg); }
   100% {
     transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg); } }
 @keyframes appear {
@@ -98,6 +98,13 @@
   100% {
     opacity: 1;
     right: 2rem; } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(-180deg); } }
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -185,7 +192,8 @@ a {
     text-align: right;
     overflow: hidden; }
     .App .right .projects.dimmed .project {
-      opacity: 0.05; }
+      opacity: 0.05;
+      transition: 0.4s ease; }
     .App .right .pop-up {
       position: absolute;
       right: 2rem;
@@ -198,7 +206,8 @@ a {
       opacity: 1;
       text-align: left;
       box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5), 0 0 5rem rgba(0, 0, 0, 0.2);
-      transition: 1.7s; }
+      transition: 1.7s;
+      z-index: 500; }
       .App .right .pop-up.fade {
         right: -100rem;
         opacity: 0; }
@@ -232,7 +241,8 @@ a {
         left: 1rem;
         font-size: 1rem;
         font-weight: 200;
-        max-width: 8rem; }
+        max-width: 8rem;
+        cursor: pointer; }
         .App .right .pop-up .website:hover {
           text-decoration: underline; }
       .App .right .pop-up .title {
@@ -254,7 +264,7 @@ a {
             position: absolute;
             left: -.9rem;
             top: .5rem;
-            transform: rotate(25deg); }
+            animation: spin 4s infinite; }
   .App .right .projects,
   .App .right .skills,
   .App .left .projects,

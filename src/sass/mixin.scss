@@ -1,10 +1,9 @@
 @keyframes appear {
-    0%   {  
-        opacity: 0;
-        right: -30rem;
-    }
-    100%   {  
-        opacity: 1;
-        right: 2rem;
-    }
+    0%   {  opacity: 0;right: -30rem;}
+    100%   {  opacity: 1;right: 2rem;}
+}
+@keyframes spin {
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(-90deg)}
+    100%{transform: rotate(-180deg)}
 }

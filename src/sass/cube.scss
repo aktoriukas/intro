@@ -29,8 +29,8 @@
     position: absolute;
     -webkit-transition: all 5s ease-in-out;
     transition: all 5s ease-in-out;
-    width: 105px;
-    height: 105px;
+    width: 109px;
+    height: 109px;
     float: left;
     overflow: hidden;
     opacity: 0.5;
@@ -95,6 +95,6 @@
   }
   @keyframes cubeRotation {
     0%   {  transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);   }
-    50%   { transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg);  } 
+    50%   { transform: rotateX(-100deg) rotateY(-128deg) rotateZ(180deg);  } 
     100%   {    transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);  }
   }
