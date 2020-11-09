@@ -8,6 +8,13 @@ class Database  {
     get projects () {
         return [
             {
+                id: 7,
+                title: 'On the edge',
+                ref: 'edge',
+                info: 'Implementing design for whole website / VanillaJS / Sass / Twig',
+                url: false
+            },
+            {
                 id: 6,
                 title: 'rota_me',
                 ref: 'rotaMe',
@@ -31,7 +38,7 @@ class Database  {
                 id: 3,
                 title: 'Brand Guidlines',
                 ref: 'guidlines',
-                info: 'Collection of Elements / Sass / JavaScript / Twig',
+                info: 'Collection of Elements / Sass / VanillaJS / Twig',
                 url: 'https://isdb-brand.campus.goodcaesar.org/'
             },
             {
@@ -76,6 +83,11 @@ class Database  {
                 id: 5,
                 title: 'PHP',
                 level: 20
+            },
+            {
+                id: 6,
+                title: 'Twig',
+                level: 40
             }
         ]
     }
