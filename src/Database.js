@@ -11,7 +11,7 @@ class Database  {
                 id: 7,
                 title: 'On the edge',
                 ref: 'edge',
-                info: 'Implementing design for whole website / VanillaJS / Sass / Twig',
+                info: 'Implementing dinamic design for whole website / VanillaJS / Sass / Twig / Mobile',
                 url: false
             },
             {
@@ -45,7 +45,7 @@ class Database  {
                 id: 2,
                 title: 'Invest African Guide',
                 ref: 'invest',
-                info: 'Redesigning from the ground up / Sass / Html',
+                info: 'Redesigning from the ground up / Sass / Html / Mobile',
                 url: 'https://investmentguide.africa/'
             },
             {
