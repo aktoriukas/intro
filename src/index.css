@@ -74,7 +74,6 @@
 
 #D3Cube {
   -webkit-animation: cubeRotation 10s infinite;
-  /* Safari */
   animation: cubeRotation 10s infinite; }
 
 @-webkit-keyframes cubeRotation {
