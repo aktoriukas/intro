@@ -44,6 +44,7 @@ a {
         flex: 0 1 30%;
         text-align: left;
         .skills {
+            cursor: alias;
             .skill {
                 &:hover {
                 }
@@ -114,6 +115,7 @@ a {
         overflow: hidden;
 
         .projects{
+            cursor: pointer;
             &.dimmed {
                 .project{
                     opacity: 0.05;    
@@ -228,17 +230,15 @@ a {
             justify-content: center;
             height: 100%;
             color: $black;
-
             .project,
             .skill {
                 transition: 0.1s ease-in-out;
-                padding-bottom: 5rem;
+                margin-bottom: 5rem;
                 font-weight: $regular;
                 font-size: 2rem;
                 display: inline;
                 position: relative;
-                color: $cube-colour;
-                cursor: pointer;
+                color: $main-tone;
 
                 .level-container {
                     position: relative;
@@ -262,15 +262,22 @@ a {
                     }
                 }
                 @media (max-height: 768px) {
-                    padding-bottom: 2rem;
+                    margin-bottom: 2rem;
                 }   
                 &:hover {
                     color: $grey-red;
+                    opacity: 0.7;
                     .level-container .level-nr{
                         color: $cube-colour;
                     }
                 }         
             }
+            @media (max-height: 768px) {
+                .project,
+                .skill {
+                    margin-bottom: 2rem;
+                }
+            }   
         }
     }
 }
