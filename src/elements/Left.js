@@ -33,7 +33,8 @@ export default class Left extends Component {
                                     className='level-nr'
                                     style={this.state.levelOpen === false ? {opacity: 0}:{opacity: 1}}
                                 >
-                                {project.level}</span>
+                                {/* {project.level} */}
+                                </span>
                             </div>
                         </li>
                     ))}

@@ -104,7 +104,6 @@ a {
                             }
                         }            
                     }
-                    
                 }
             }
         }
@@ -141,6 +140,7 @@ a {
             box-shadow: 0 0 .4rem $cube-colour, 0 0 5rem $cube-colour-clear;
             transition: 1.7s;
             z-index: 500;
+            cursor: alias;
             &.fade {
                 right: -100rem;
                 opacity: 0;
@@ -256,9 +256,9 @@ a {
                         padding-left: .5rem;
                         color: inherit;
                         transition: opacity 1.5s ease;
-                        &:after {
-                            content: '%';
-                        }
+                        // &:after {
+                        //     content: '%';
+                        // }
                     }
                 }
                 @media (max-height: 768px) {
@@ -266,7 +266,6 @@ a {
                 }   
                 &:hover {
                     color: $grey-red;
-                    opacity: 0.7;
                     .level-container .level-nr{
                         color: $cube-colour;
                     }
