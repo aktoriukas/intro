@@ -45,7 +45,7 @@ export default class PopUp extends Component {
                 :
                 <div
                     className='website'
-                >website currently not available</div>
+                >project still in development</div>
                 }
             </div>
         )

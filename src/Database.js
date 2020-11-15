@@ -18,7 +18,8 @@ class Database  {
                 id: 6,
                 title: 'rota_me',
                 ref: 'rotaMe',
-                info: 'Rota template application / React / Sass'
+                info: 'Rota template application / React / Sass',
+                url: false
             },
             {
                 id: 5,
@@ -39,7 +40,7 @@ class Database  {
                 title: 'Brand Guidlines',
                 ref: 'guidlines',
                 info: 'Collection of Elements / Sass / VanillaJS / Twig',
-                url: 'https://isdb-brand.campus.goodcaesar.org/'
+                url: false
             },
             {
                 id: 2,
