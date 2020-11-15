@@ -175,7 +175,8 @@ a {
     height: 100%;
     position: absolute;
     background: #EEEEEE;
-    z-index: -3; }
+    z-index: -3;
+    position: absolute; }
   .App .main {
     margin: 1rem; }
   .App .left {
