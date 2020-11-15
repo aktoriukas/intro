@@ -11,6 +11,12 @@ html, body, #root {
     font-family: $commissioner;
     font-size: 16px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    @media (max-width: 991.98px) {
+    overflow: scroll;
+    height: 200vh;
+    font-size: 25px;
+    }
 }
 ul, ol ,li, p {
     padding: 0;
@@ -244,6 +250,7 @@ a {
                     position: relative;
                     display: flex;
                     flex-direction: row;
+                    margin-top: .5rem;
                     .level {
                         height: .5rem;
                         background: $grey-red;
@@ -261,7 +268,7 @@ a {
                         // }
                     }
                 }
-                @media (max-height: 768px) {
+                @media only screen and (min-height: 0px) and (max-height: 768px) {
                     margin-bottom: 2rem;
                 }   
                 &:hover {
@@ -279,4 +286,51 @@ a {
             }   
         }
     }
+    @media (max-width: 991.98px) {
+        flex-direction: column;
+        .center{
+            width: 15rem;
+            position: fixed;
+            .center-container {
+                .about li {
+                    text-align: left;
+                }
+                .footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding:5rem 0 .5rem;
+                    background: linear-gradient(to top, #ffffff 50%, #ffffff41 100%);
+                    z-index: 10;
+                }
+            }
+        }
+        &:before {
+            position: fixed;
+        }
+        .left {
+            .skill{
+                text-align: right;
+                .level-container {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        .right {
+            .projects {
+                .pop-up {
+
+                }
+            }
+        }
+        }
+        .left,
+        .right {
+            flex: 50%;
+            z-index: -1;
+            .skills{
+        }
+    }   
 }
