@@ -34,14 +34,6 @@ a {
     height: 100%;
     position: relative;
     overflow: hidden;
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(./img/wall.jpg);
-        opacity: 0.2;
-    }
     .main {
         margin: 1rem;
         height: 100%;
@@ -305,9 +297,6 @@ a {
                     z-index: 10;
                 }
             }
-        }
-        &:before {
-            position: fixed;
         }
         .left {
             .skill{
