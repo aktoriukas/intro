@@ -6,10 +6,13 @@ $black-light:   #0000004f;
 $grey-red:      #4f1212;
 $main-tone:     rgba(57, 7, 7, 0.7);
 
-$cube-colour:            rgba(0, 0, 0, 0.5);
+$background-grey:       #EEEEEE;
+$background-grey-clear: #eeeeee4c;
+
+$cube-colour:            $white;
 $cube-colour-clear:      rgba(0, 0, 0, 0.2);
 
-$linear-gradient:  #ffffff 50%, #ffffff41 100%;
+$linear-gradient:  $background-grey 50%, $background-grey-clear 100%;
 
 
 //WEIGHT ===============

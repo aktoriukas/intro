@@ -37,10 +37,23 @@ a {
     &:before {
         content: '';
         position: absolute;
+        background: url(./img/abstract.jpg);
         width: 100%;
         height: 100%;
-        background: $white;
         z-index: -2;
+        background-repeat: no-repeat;
+        background-position: center 45%;
+        background-size: 30rem;
+        opacity: 0.8;
+    }
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $background-grey;
+        z-index: -3;
+
     }
     .main {
         margin: 1rem;
@@ -66,20 +79,24 @@ a {
             flex-direction: column;
             height: 100%;
             .top {
-                flex: 0 1 50%;
+                flex: 0 1 30%;
             }
             #wrapD3Cube {
-                flex: 0 1 10%;
+                flex: 0 1 30%;
+                #D3Cube {
+                    position: fixed;
+                    bottom: 0;
+                    top: 0;
+                }
             }
             .about {
                 flex: 0 1 15%;
                 padding: 4rem 0 0 ;
-                max-width: 24rem;
                 margin: 0 auto;
                 line-height: 1.5;
                 font-size: 1.15rem;
                 font-weight: $regular;
-                color: $cube-colour;
+                color: $main-tone;
             }
             .footer {
                 flex: 0 1 25%;
@@ -138,10 +155,12 @@ a {
             opacity: 1;
             height: 25rem;
             width: 15rem;
-            border: 1px solid $cube-colour;
+            border: 4px solid $background-grey;
+            outline: 3px solid $white;
             animation: appear 1s;
             padding: 1rem;
             opacity: 1;
+            background: $white;
             text-align: left;
             box-shadow: 0 0 .4rem $cube-colour, 0 0 5rem $cube-colour-clear;
             transition: 1.7s;
@@ -182,7 +201,7 @@ a {
                     top:.9rem;
                     width: 2rem;
                     height: 1px;
-                    background-color: $cube-colour;
+                    background-color: $main-tone;
                     border-radius: 20rem;
                 }
             }
@@ -215,7 +234,7 @@ a {
                         content: '';
                         width: .3rem;
                         height: .3rem;
-                        border:1px solid $cube-colour;
+                        border:1px solid $main-tone;
                         position: absolute;
                         left: -.9rem;
                         top: .5rem;
@@ -291,9 +310,16 @@ a {
         .center{
             width: 15rem;
             position: fixed;
+            z-index: 10;
             .center-container {
-                .about li {
-                    text-align: left;
+                .about{
+                    padding-top: 8rem;
+                    li {
+                        text-align: left;
+                    }
+                }
+                #wrapD3Cube #D3Cube {
+                    left: 2rem;
                 }
                 .footer {
                     position: fixed;
@@ -303,6 +329,7 @@ a {
                     padding:5rem 0 .5rem;
                     background: linear-gradient(to top, $linear-gradient);
                     z-index: 10;
+                    display: inherit;
                     &:before {
                         content: '';
                         position: fixed;
@@ -310,12 +337,17 @@ a {
                         top:0;
                         background: linear-gradient(to bottom, $linear-gradient);
                         height: 10rem;
+                        display: inherit;
+                        z-index: 999;
                     }
                 }
             }
         }
         &:before {
             position: fixed;
+            left: -17rem;
+            top: -4rem;
+            background-size: 50rem;
         }
         .left {
             .skill{
@@ -337,7 +369,7 @@ a {
         .left,
         .right {
             flex: 50%;
-            z-index: -1;
+            z-index: 1;
             .skills{
         }
     }   
