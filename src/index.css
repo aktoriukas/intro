@@ -135,6 +135,13 @@ a {
   height: 100%;
   position: relative;
   overflow: hidden; }
+  .App:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffff;
+    z-index: -2; }
   .App .main {
     margin: 1rem;
     height: 100%; }
@@ -382,6 +389,15 @@ a {
           padding: 5rem 0 .5rem;
           background: linear-gradient(to top, #ffffff 50%, #ffffff41 100%);
           z-index: 10; }
+          .App .center .center-container .footer:before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: linear-gradient(to bottom, #ffffff 50%, #ffffff41 100%);
+            height: 10rem; }
+      .App:before {
+        position: fixed; }
       .App .left .skill {
         text-align: right; }
         .App .left .skill .level-container {
