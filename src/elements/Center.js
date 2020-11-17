@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import Cube from './Cube';
 import Footer from './Footer';
 import Database from '../Database';
@@ -25,6 +26,9 @@ export default class Center extends Component {
             <div className='center main'>
                 <div className='center-container'>
                     <div className='top'></div>
+                    <Header 
+                        toggleInvert={this.props.toggleInvert}
+                    />
                     <Cube/>
                         <ul className='about'>
                             {intro.map((point) => (
