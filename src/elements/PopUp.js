@@ -15,13 +15,14 @@ export default class PopUp extends Component {
             tasks: tasks
         }
     }
-
     render() {
         return (
-            <div className='pop-up'>
+            <div className='pop-up'
+            >
                 <span 
                     className='button-x'
-                    onClick={this.props.close}>
+                    onClick={this.props.close}
+                >
                     <span></span>
                     <span></span>
                 </span>

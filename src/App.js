@@ -21,10 +21,19 @@ export default class App extends Component {
       dark: !this.state.dark
     })
   }
+  closepopUp (e) {
+    let pop = document.getElementsByClassName('pop-up');
+    if(e.key === 'Escape' && pop[0]) {
+
+    }
+  }
 
   render () {
     return (
-      <div className={this.state.dark === false ? 'App' : 'App invert'}>
+      <div className={this.state.dark === false ? 'App' : 'App invert'}
+        onKeyDown={this.closepopUp}
+        tabIndex="0"
+      >
         <Left Database={Database}/>
         <Center
           Database={Database}

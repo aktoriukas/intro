@@ -32,7 +32,7 @@ export default class Right extends Component {
 
         const {Database} = this.props;
         const projectClasses = this.state.popUp ? 'projects dimmed' : 'projects';
-
+        
         return (
             <div className='right main'>
                 <ul className={projectClasses}>

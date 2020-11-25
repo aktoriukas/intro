@@ -142,6 +142,9 @@ html, body, #root {
       height: 200vh;
       font-size: 25px; } }
 
+html.invert {
+  filter: invert(1); }
+
 ul, ol, li, p {
   padding: 0;
   margin: 0;
@@ -166,6 +169,9 @@ button {
   overflow: hidden; }
   .App.invert {
     filter: invert(1); }
+  .App:focus {
+    outline: none;
+    border: none; }
   .App:before {
     content: '';
     position: absolute;
@@ -194,9 +200,12 @@ button {
     top: 0;
     z-index: 666; }
     .App .header .dark-button .dark-icon {
-      width: 3rem;
+      width: 2rem;
       cursor: pointer;
-      opacity: 0.5; }
+      opacity: 0.7; }
+      @media (max-width: 991.98px) {
+        .App .header .dark-button .dark-icon {
+          display: none; } }
   .App .left {
     flex: 0 1 30%;
     text-align: left; }
