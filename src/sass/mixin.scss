@@ -1,6 +1,10 @@
-@keyframes appear {
+@keyframes appear-from-right {
     0%   {  opacity: 0;right: -30rem;}
     100%   {  opacity: 1;right: 2rem;}
+}
+@keyframes appear-from-left {
+    0%   {  opacity: 0;left: -30rem;}
+    100%   {  opacity: 1;left: 2rem;}
 }
 @keyframes spin {
     0%{transform: rotate(0deg)}

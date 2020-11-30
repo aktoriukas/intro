@@ -62,33 +62,21 @@ class Database  {
         return [
             {
                 id: 1,
-                title: 'React',
-                level: 50
+                title: 'Front end',
+                ref: 'front',
+                info: 'Static bar website / Html / Css',
             },
             {
                 id: 2,
-                title: 'Sass',
-                level: 90
+                title: 'Back end',
+                ref: 'back',
+                info: 'Static bar website / Html / Css'
             },
             {
                 id: 3,
-                title: 'Vanilla JS',
-                level: 60
-            },
-            {
-                id: 4,
-                title: 'Html',
-                level: 90
-            },
-            {
-                id: 5,
-                title: 'PHP',
-                level: 20
-            },
-            {
-                id: 6,
-                title: 'Twig',
-                level: 40
+                title: 'Design',
+                ref: 'design',
+                info: 'Static bar website / Html / Css'
             }
         ]
     }

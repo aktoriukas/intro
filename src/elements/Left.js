@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PopUp from './PopUp';
 
 
 export default class Left extends Component {
@@ -6,38 +7,50 @@ export default class Left extends Component {
         super(props)
     
         this.state = {
-             levelOpen: false
+            popUp: false
         }
     }
-    
+    popUp (pop) {
+        this.setState({
+            popUp:true,
+            project: pop
+        })
+    }
+    closepopUp () {
+        let pop = document.getElementsByClassName('pop-up');
+        pop[0].classList.add('fade');
+        setTimeout(() => {
+            this.setState({
+                popUp: false
+            })
+        },500)
+    }
+
 
     render() {
         const {Database} = this.props;
+        const skillsClasses = this.state.popUp ? 'skills dimmed' : 'skills';
+
 
         return (
             <div className='left main'>
-                <ul className='skills'>
+                <ul className={skillsClasses}>
                     {Database.skills.map((project) => (
                         <li
                             key={project.id}
                             className='skill'
-                            onMouseEnter={() => this.setState({levelOpen:true})}
-                            onMouseLeave={() => this.setState({levelOpen:false})}
+                            onClick={() => this.popUp(project)}
                         >{project.title}
-                            <div className='level-container'>
-                                <span 
-                                    className='level' 
-                                    style={this.state.levelOpen ===false ? {width: 0}:{width: project.level}}
-                                ></span>
-                                <span 
-                                    className='level-nr'
-                                    style={this.state.levelOpen === false ? {opacity: 0}:{opacity: 1}}
-                                >
-                                {/* {project.level} */}
-                                </span>
-                            </div>
                         </li>
                     ))}
+                    {this.state.popUp ?
+                    <PopUp
+                        project={this.state.project}
+                        close={this.closepopUp.bind(this)}
+                    />
+                    :
+                    ''
+                    }
                 </ul>
             </div>
         )

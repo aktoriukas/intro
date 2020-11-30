@@ -104,6 +104,22 @@ button {
                 }
             }
         }
+        .pop-up {
+            left: 2rem;
+            animation: appear-from-left 1s;
+            &.fade {
+                left: -100rem;
+                opacity: 0;
+            }
+            @media (max-width: 991.98px) {
+                left: unset;
+                right: 2rem;
+                &.fade {
+                    left: unset;
+                    right: -100rem;
+                }
+            }
+        }
     }
     .center {
         flex: 0 1 40%;
@@ -171,29 +187,32 @@ button {
         flex: 0 1 30%;
         text-align: right;
         overflow: hidden;
-
         .projects{
             cursor: pointer;
-            &.dimmed {
-                .project{
-                    opacity: 0.05;    
-                    transition: 0.4s ease;
-                }
-            }
             .project{
                 &:hover {
                 }
             }
         }
         .pop-up {
-            position: absolute;
             right: 2rem;
+            animation: appear-from-right 1s;
+
+            &.fade {
+                right: -100rem;
+                opacity: 0;
+            }
+        }
+    }
+    .right,
+    .left {
+        .pop-up {
+            position: absolute;
             opacity: 1;
             height: 25rem;
             width: 15rem;
             border: 4px solid $background-grey;
             outline: 3px solid $white;
-            animation: appear 1s;
             padding: 1rem;
             opacity: 1;
             background: $white;
@@ -202,10 +221,6 @@ button {
             transition: 1.7s;
             z-index: 500;
             cursor: alias;
-            &.fade {
-                right: -100rem;
-                opacity: 0;
-            }
             .button-x {
                 position: absolute;
                 right: 1rem;
@@ -280,12 +295,15 @@ button {
                 }
             }
         }
-
-    }
-    .right,
-    .left {
         .projects,
         .skills {
+            &.dimmed {
+                .project,
+                .skill{
+                    opacity: 0.05;    
+                    transition: 0.4s ease;
+                }
+            }
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -300,6 +318,7 @@ button {
                 display: inline;
                 position: relative;
                 color: $main-tone;
+                cursor: pointer;
 
                 .level-container {
                     position: relative;
