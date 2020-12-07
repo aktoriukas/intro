@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
             <div className='footer'>
 
-                <div className='made-by'>Copyright © 2020—2020. G.S </div>
+                <div className='made-by'>Copyright © 2020—2020. G.S made using React</div>
                 <div className='social-media'>
 
                     {Database.socialMedia.map((media) => (

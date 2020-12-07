@@ -8,6 +8,13 @@ class Database  {
     get projects () {
         return [
             {
+                id: 8,
+                title: 'Transformers 2020',
+                ref: 'transformers',
+                info: 'Implement design for whole website / Sass / Drupal / Twig / Mobile',
+                url: false
+            },
+            {
                 id: 7,
                 title: 'On the edge',
                 ref: 'edge',
@@ -64,19 +71,19 @@ class Database  {
                 id: 1,
                 title: 'Front end',
                 ref: 'front',
-                info: 'Static bar website / Html / Css',
+                info: 'Html / Css / Sass / Vanilla JS / React / Twig',
             },
             {
                 id: 2,
                 title: 'Back end',
                 ref: 'back',
-                info: 'Static bar website / Html / Css'
+                info: 'PHP / MySQL / Node.js / Sanity / Symphony'
             },
             {
                 id: 3,
                 title: 'Design',
                 ref: 'design',
-                info: 'Static bar website / Html / Css'
+                info: 'Photoshop / Indesign / Figma / Gravit Designer'
             }
         ]
     }
@@ -107,7 +114,7 @@ class Database  {
     }
     get about () {
         return (
-            'Passionate and thirsty for knowledge / Excellent in problem-solving / Working creatively and efficiently whilst meeting the highest standards and attention to detail.'
+            'Passionate and thirsty for knowledge / Excellent in problem-solving / Working creatively and efficiently / whilst meeting the highest standards / and attention to detail.'
         )
     }
 }

@@ -16,6 +16,24 @@ export default class PopUp extends Component {
         }
     }
     render() {
+        let link;
+        if (this.props.project.url) {
+            link = 
+                <a 
+                    className='website' 
+                    href={this.props.project.url} 
+                    target='_black'>
+                    {`www.website`}
+                </a>
+        } else if (this.props.project.url === false) {
+            link =
+                <div
+                    className='website'
+                     >project still in development
+                </div>
+        }else {
+            link = ''
+        }
         return (
             <div className='pop-up'
             >
@@ -36,18 +54,7 @@ export default class PopUp extends Component {
                         </li>
                     ))}
                 </ul>
-                {this.props.project.url ? 
-                <a 
-                    className='website' 
-                    href={this.props.project.url} 
-                    target='_black'>
-                    {`www.website`}
-                </a>
-                :
-                <div
-                    className='website'
-                >project still in development</div>
-                }
+                {link}
             </div>
         )
     }

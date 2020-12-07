@@ -9,6 +9,7 @@ export default class Right extends Component {
         this.state = {
              popUp: false
         }
+        this.closepopUp = this.closepopUp.bind(this)
     }
 
     popUp (pop) {
@@ -24,14 +25,15 @@ export default class Right extends Component {
             this.setState({
                 popUp: false
             })
-        },500)
+        },300)
     }
     
 
     render() {
 
-        const {Database} = this.props;
-        const projectClasses = this.state.popUp ? 'projects dimmed' : 'projects';
+        const { Database } = this.props;
+        const { project, popUp } = this.state;
+        const projectClasses = popUp ? 'projects dimmed' : 'projects';
         
         return (
             <div className='right main'>
@@ -43,10 +45,10 @@ export default class Right extends Component {
                             onClick={() => this.popUp(project)}
                         >{project.title}</li>
                     ))}
-                    {this.state.popUp ?
+                    {popUp ?
                     <PopUp
-                        project={this.state.project}
-                        close={this.closepopUp.bind(this)}
+                        project={project}
+                        close={this.closepopUp}
                     />
                     :
                     ''

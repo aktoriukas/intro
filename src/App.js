@@ -4,6 +4,7 @@ import Left from './elements/Left';
 import Center from './elements/Center';
 import Right from './elements/Right';
 import Database from './Database';
+import {ReactComponent as Splash} from './img/splash.svg';
 
 
 export default class App extends Component {  
@@ -30,7 +31,7 @@ export default class App extends Component {
 
   render () {
     return (
-      <div className={this.state.dark === false ? 'App' : 'App invert'}
+      <div className={this.state.dark === false ? 'App' : 'App dark'}
         onKeyDown={this.closepopUp}
         tabIndex="0"
       >
@@ -42,6 +43,9 @@ export default class App extends Component {
         <Right 
           Database={Database}
         />
+        <div className='background-image'>
+          <Splash />
+        </div>
       </div>
     );  
   }

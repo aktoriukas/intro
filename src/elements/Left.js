@@ -9,6 +9,7 @@ export default class Left extends Component {
         this.state = {
             popUp: false
         }
+        this.closepopUp = this.closepopUp.bind(this)
     }
     popUp (pop) {
         this.setState({
@@ -23,13 +24,14 @@ export default class Left extends Component {
             this.setState({
                 popUp: false
             })
-        },500)
+        },300)
     }
 
 
     render() {
+        const { popUp, project } = this.state;
         const {Database} = this.props;
-        const skillsClasses = this.state.popUp ? 'skills dimmed' : 'skills';
+        const skillsClasses = popUp ? 'skills dimmed' : 'skills';
 
 
         return (
@@ -43,10 +45,10 @@ export default class Left extends Component {
                         >{project.title}
                         </li>
                     ))}
-                    {this.state.popUp ?
+                    {popUp ?
                     <PopUp
-                        project={this.state.project}
-                        close={this.closepopUp.bind(this)}
+                        project={project}
+                        close={this.closepopUp}
                     />
                     :
                     ''

@@ -45,7 +45,7 @@
   transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side1 {
       transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(80px); } }
@@ -54,7 +54,7 @@
   transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side2 {
       transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(80px); } }
@@ -63,7 +63,7 @@
   transform: translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side3 {
       transform: translateX(0px) translateY(0px) translateZ(80px); } }
@@ -72,7 +72,7 @@
   transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side4 {
       transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(80px); } }
@@ -81,7 +81,7 @@
   transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side5 {
       transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(80px); } }
@@ -90,7 +90,7 @@
   transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
   -moz-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
   -webkit-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-  background-color: #ffff; }
+  background-color: var(--color-cube); }
   @media (max-width: 991.98px) {
     #side6 {
       transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(80px); } }
@@ -142,7 +142,15 @@ html, body, #root {
   height: 100%;
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --color-main-font: rgba(57, 7, 7, 0.7);
+  --color-shadow: #eeeeee4c;
+  --color-background: #EEEEEE;
+  --color-borders: #EEEEEE;
+  --color-hover-red: #4f1212;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-cube: #2c2a2a; }
   @media (max-width: 991.98px) {
     html, body, #root {
       overflow: scroll;
@@ -174,30 +182,40 @@ button {
   height: 100%;
   position: relative;
   overflow: hidden; }
-  .App.invert {
-    filter: invert(1); }
+  .App.dark {
+    --color-background: #000000;
+    --color-main-font: rgba(182, 173, 173, 0.7);
+    --color-white: #000000;
+    --color-black: #ffffff;
+    --color-cube: #ffffff; }
+    .App.dark .header .dark-button,
+    .App.dark .footer .social-media {
+      filter: invert(100%); }
+    .App.dark .footer, .App.dark .footer:before {
+      --color-shadow: #00000000;
+      --color-borders: var(--color-background); }
   .App:focus {
     outline: none;
     border: none; }
-  .App:before {
-    content: '';
-    position: absolute;
-    background: url(./img/abstract.png);
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-repeat: no-repeat;
-    background-position: center 45%;
-    background-size: 30rem;
-    opacity: 0.8; }
   .App::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #EEEEEE;
+    background: var(--color-background);
     z-index: -3;
     position: absolute; }
+  .App .background-image {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    width: 300%;
+    height: 300%;
+    z-index: -2; }
+    .App .background-image svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.4; }
   .App .main {
     margin: 1rem; }
   .App .header {
@@ -210,9 +228,6 @@ button {
       width: 2rem;
       cursor: pointer;
       opacity: 0.7; }
-      @media (max-width: 991.98px) {
-        .App .header .dark-button .dark-icon {
-          display: none; } }
   .App .left {
     flex: 0 1 30%;
     text-align: left; }
@@ -227,7 +242,8 @@ button {
       @media (max-width: 991.98px) {
         .App .left .pop-up {
           left: unset;
-          right: 2rem; }
+          right: 2rem;
+          animation: appear-from-right 1s; }
           .App .left .pop-up.fade {
             left: unset;
             right: -100rem; } }
@@ -249,12 +265,20 @@ button {
           top: 0; }
       .App .center .center-container .about {
         flex: 0 1 15%;
-        padding: 4rem 0 0;
-        margin: 0 auto;
+        margin: 4rem auto 0;
         line-height: 1.5;
         font-size: 1.15rem;
         font-weight: 400;
-        color: rgba(57, 7, 7, 0.7); }
+        color: var(--color-main-font);
+        border: 4px solid var(--color-borders);
+        outline: 3px solid var(--color-white);
+        background: var(--color-white);
+        box-shadow: 0 0 0.4rem #ffff, 0 0 1rem var(--color-shadow);
+        opacity: 0.8;
+        padding: .5rem 1rem 0;
+        transition: .5s ease opacity; }
+        .App .center .center-container .about:hover {
+          opacity: 0.9; }
       .App .center .center-container .footer {
         flex: 0 1 25%;
         display: flex;
@@ -262,7 +286,8 @@ button {
         padding-bottom: 2rem; }
         .App .center .center-container .footer .made-by {
           font-size: .8rem;
-          font-weight: 100; }
+          font-weight: 100;
+          color: var(--color-black); }
         .App .center .center-container .footer .social-media {
           display: flex;
           flex-direction: row;
@@ -296,13 +321,13 @@ button {
     opacity: 1;
     height: 25rem;
     width: 15rem;
-    border: 4px solid #EEEEEE;
-    outline: 3px solid #ffff;
+    border: 4px solid var(--color-borders);
+    outline: 3px solid var(--color-white);
     padding: 1rem;
     opacity: 1;
-    background: #ffff;
+    background: var(--color-white);
     text-align: left;
-    box-shadow: 0 0 0.4rem #ffff, 0 0 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.4rem #ffff, 0 0 1rem var(--color-shadow);
     transition: 1.7s;
     z-index: 500;
     cursor: alias; }
@@ -328,7 +353,7 @@ button {
         top: .9rem;
         width: 2rem;
         height: 1px;
-        background-color: rgba(57, 7, 7, 0.7);
+        background-color: var(--color-main-font);
         border-radius: 20rem; }
         .App .right .pop-up .button-x span:first-child,
         .App .left .pop-up .button-x span:first-child {
@@ -344,7 +369,8 @@ button {
       font-size: 1rem;
       font-weight: 200;
       max-width: 8rem;
-      cursor: pointer; }
+      cursor: pointer;
+      color: var(--color-black); }
       .App .right .pop-up .website:hover,
       .App .left .pop-up .website:hover {
         text-decoration: underline; }
@@ -352,7 +378,8 @@ button {
     .App .left .pop-up .title {
       font-size: 2rem;
       font-weight: 200;
-      margin: .5rem 0 1rem; }
+      margin: .5rem 0 1rem;
+      color: var(--color-black); }
     .App .right .pop-up .task-list,
     .App .left .pop-up .task-list {
       padding-left: 1rem; }
@@ -361,13 +388,14 @@ button {
         position: relative;
         padding-bottom: 1rem;
         font-size: 1.2rem;
-        font-weight: 200; }
+        font-weight: 200;
+        color: var(--color-black); }
         .App .right .pop-up .task-list .task:before,
         .App .left .pop-up .task-list .task:before {
           content: '';
           width: .3rem;
           height: .3rem;
-          border: 1px solid rgba(57, 7, 7, 0.7);
+          border: 1px solid var(--color-main-font);
           position: absolute;
           left: -.9rem;
           top: .5rem;
@@ -405,7 +433,7 @@ button {
       font-size: 2rem;
       display: inline;
       position: relative;
-      color: rgba(57, 7, 7, 0.7);
+      color: var(--color-main-font);
       cursor: pointer; }
       .App .right .projects .project .level-container,
       .App .right .projects .skill .level-container,
@@ -428,7 +456,7 @@ button {
         .App .left .skills .project .level-container .level,
         .App .left .skills .skill .level-container .level {
           height: .5rem;
-          background: #4f1212;
+          background: var(--color-hover-red);
           border-radius: .5rem;
           opacity: 0.3;
           transition: width 2s ease; }
@@ -462,7 +490,7 @@ button {
       .App .left .projects .skill:hover,
       .App .left .skills .project:hover,
       .App .left .skills .skill:hover {
-        color: #4f1212; }
+        color: var(--color-hover-red); }
         .App .right .projects .project:hover .level-container .level-nr,
         .App .right .projects .skill:hover .level-container .level-nr,
         .App .right .skills .project:hover .level-container .level-nr,
@@ -490,7 +518,7 @@ button {
         position: fixed;
         z-index: 10; }
         .App .center .center-container .about {
-          padding-top: 8rem; }
+          padding: 1.5rem 1rem; }
           .App .center .center-container .about li {
             text-align: left; }
         .App .center .center-container #wrapD3Cube #D3Cube {
@@ -501,7 +529,7 @@ button {
           left: 0;
           right: 0;
           padding: 5rem 0 .5rem;
-          background: linear-gradient(to top, #EEEEEE 50%, #eeeeee4c 100%);
+          background: linear-gradient(to top, var(--color-borders) 50%, var(--color-shadow) 100%);
           z-index: 10;
           display: inherit; }
           .App .center .center-container .footer:before {
@@ -509,15 +537,17 @@ button {
             position: fixed;
             width: 100%;
             top: 0;
-            background: linear-gradient(to bottom, #EEEEEE 50%, #eeeeee4c 100%);
+            background: linear-gradient(to bottom, var(--color-borders) 50%, var(--color-shadow) 100%);
             height: 10rem;
             display: inherit;
             z-index: 999; }
-      .App:before {
+      .App .background-image {
         position: fixed;
-        left: -17rem;
-        top: -4rem;
-        background-size: 50rem; }
+        left: -190%;
+        top: -150%;
+        width: 400%;
+        height: 400%;
+        transform: rotate(60deg); }
       .App .left .skill {
         text-align: right; }
         .App .left .skill .level-container {
