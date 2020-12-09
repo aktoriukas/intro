@@ -231,8 +231,6 @@ button {
   .App .left {
     flex: 0 1 30%;
     text-align: left; }
-    .App .left .skills {
-      cursor: alias; }
     .App .left .pop-up {
       left: 2rem;
       animation: appear-from-left 1s; }
@@ -330,7 +328,7 @@ button {
     box-shadow: 0 0 0.4rem #ffff, 0 0 1rem var(--color-shadow);
     transition: 1.7s;
     z-index: 500;
-    cursor: alias; }
+    cursor: auto; }
     .App .right .pop-up .button-x,
     .App .left .pop-up .button-x {
       position: absolute;

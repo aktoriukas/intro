@@ -12,7 +12,7 @@ class Database  {
                 title: 'Transformers 2020',
                 ref: 'transformers',
                 info: 'Implement design for whole website / Sass / Drupal / Twig / Mobile',
-                url: false
+                url: 'https://isdb-transformers.org/'
             },
             {
                 id: 7,

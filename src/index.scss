@@ -117,7 +117,6 @@ button {
         flex: 0 1 30%;
         text-align: left;
         .skills {
-            cursor: alias;
             .skill {
                 &:hover {
                 }
@@ -251,7 +250,7 @@ button {
             box-shadow: 0 0 .4rem $cube-colour, 0 0 1rem var(--color-shadow);
             transition: 1.7s;
             z-index: 500;
-            cursor: alias;
+            cursor: auto;
             .button-x {
                 position: absolute;
                 right: 1rem;
