@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.css';
 import Left from './elements/Left';
 import Center from './elements/Center';
 import Right from './elements/Right';

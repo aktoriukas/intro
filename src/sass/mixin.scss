@@ -1,13 +1,67 @@
 @keyframes appear-from-right {
-    0%   {  opacity: 0;right: -30rem;}
-    100%   {  opacity: 1;right: 2rem;}
+  0% {
+    opacity: 0;
+    right: -30rem;
+  }
+  100% {
+    opacity: 1;
+    right: 2rem;
+  }
 }
 @keyframes appear-from-left {
-    0%   {  opacity: 0;left: -30rem;}
-    100%   {  opacity: 1;left: 2rem;}
+  0% {
+    opacity: 0;
+    left: -30rem;
+  }
+  100% {
+    opacity: 1;
+    left: 2rem;
+  }
 }
 @keyframes spin {
-    0%{transform: rotate(0deg)}
-    50%{transform: rotate(-90deg)}
-    100%{transform: rotate(-180deg)}
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@mixin extend-button {
+  &:active,
+  &:hover {
+    letter-spacing: 5px;
+    color: var(--color-cube);
+  }
+  &:after,
+  &:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: -0.5rem;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    width: 0;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    backface-visibility: hidden;
+    border-color: var(--color-brown);
+    transition: width 350ms ease-in-out;
+    width: 50%;
+  }
+  &:before {
+    top: -0.2rem;
+  }
+  &:hover:before {
+    bottom: auto;
+    top: -0.2rem;
+    width: 80%;
+  }
 }

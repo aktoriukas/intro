@@ -3,6 +3,7 @@ import Header from './Header';
 import Cube from './Cube';
 import Footer from './Footer';
 import Database from '../Database';
+import Alphabet from '../Aphabet';
 
 export default class Center extends Component {
     constructor(props) {
@@ -30,11 +31,13 @@ export default class Center extends Component {
                         toggleInvert={this.props.toggleInvert}
                     />
                     <Cube/>
-                        <ul className='about'>
-                            {intro.map((point) => (
-                                <li key={point} >{point}</li>
-                            ))}
-                        </ul>
+
+                    <ul className='about'>
+                        {intro.map((point) => (
+                            <li key={point} >{point}</li>
+                        ))}
+                    </ul>
+
                     <Footer/>
                 </div>
             </div>

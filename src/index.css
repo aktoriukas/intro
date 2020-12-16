@@ -134,7 +134,9 @@
     transform: rotate(-90deg); }
   100% {
     transform: rotate(-180deg); } }
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -145,14 +147,17 @@ html, body, #root {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   --color-main-font: rgba(57, 7, 7, 0.7);
   --color-shadow: #eeeeee4c;
-  --color-background: #EEEEEE;
-  --color-borders: #EEEEEE;
+  --color-background: #eeeeee;
+  --color-borders: #eeeeee;
   --color-hover-red: #4f1212;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-cube: #2c2a2a; }
+  --color-cube: #2c2a2a;
+  --color-brown: #b9a2a4; }
   @media (max-width: 991.98px) {
-    html, body, #root {
+    html,
+    body,
+    #root {
       overflow: scroll;
       height: 200vh;
       font-size: 25px; } }
@@ -160,7 +165,10 @@ html, body, #root {
 html.invert {
   filter: invert(1); }
 
-ul, ol, li, p {
+ul,
+ol,
+li,
+p {
   padding: 0;
   margin: 0;
   list-style: none; }
@@ -191,14 +199,15 @@ button {
     .App.dark .header .dark-button,
     .App.dark .footer .social-media {
       filter: invert(100%); }
-    .App.dark .footer, .App.dark .footer:before {
+    .App.dark .footer,
+    .App.dark .footer:before {
       --color-shadow: #00000000;
       --color-borders: var(--color-background); }
   .App:focus {
     outline: none;
     border: none; }
   .App::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -262,41 +271,44 @@ button {
           bottom: 0;
           top: 0; }
       .App .center .center-container .about {
-        flex: 0 1 15%;
+        flex: 0 1 30%;
         margin: 4rem auto 0;
         line-height: 1.5;
         font-size: 1.15rem;
         font-weight: 400;
         color: var(--color-main-font);
-        border: 4px solid var(--color-borders);
-        outline: 3px solid var(--color-white);
-        background: var(--color-white);
-        box-shadow: 0 0 0.4rem #ffff, 0 0 1rem var(--color-shadow);
-        opacity: 0.8;
-        padding: .5rem 1rem 0;
-        transition: .5s ease opacity; }
-        .App .center .center-container .about:hover {
-          opacity: 0.9; }
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; }
+        @media (max-width: 991.98px) {
+          .App .center .center-container .about {
+            justify-content: flex-start; } }
+      .App .center .center-container #name {
+        display: flex;
+        flex-direction: row; }
+        .App .center .center-container #name svg {
+          width: 5rem;
+          height: 5rem; }
       .App .center .center-container .footer {
-        flex: 0 1 25%;
+        flex: 0 1 10%;
         display: flex;
         flex-direction: column-reverse;
         padding-bottom: 2rem; }
         .App .center .center-container .footer .made-by {
-          font-size: .8rem;
+          font-size: 0.8rem;
           font-weight: 100;
           color: var(--color-black); }
         .App .center .center-container .footer .social-media {
           display: flex;
           flex-direction: row;
-          margin: 0  auto;
+          margin: 0 auto;
           cursor: pointer;
           z-index: 5; }
           .App .center .center-container .footer .social-media a {
             cursor: pointer; }
             .App .center .center-container .footer .social-media a .logo {
               width: 1.7rem;
-              padding: 0 .5rem;
+              padding: 0 0.5rem;
               opacity: 0.7;
               cursor: pointer; }
               .App .center .center-container .footer .social-media a .logo:hover {
@@ -305,8 +317,6 @@ button {
     flex: 0 1 30%;
     text-align: right;
     overflow: hidden; }
-    .App .right .projects {
-      cursor: pointer; }
     .App .right .pop-up {
       right: 2rem;
       animation: appear-from-right 1s; }
@@ -348,7 +358,7 @@ button {
         transition: 1s ease-in-out;
         transform-origin: center;
         position: absolute;
-        top: .9rem;
+        top: 0.9rem;
         width: 2rem;
         height: 1px;
         background-color: var(--color-main-font);
@@ -376,7 +386,7 @@ button {
     .App .left .pop-up .title {
       font-size: 2rem;
       font-weight: 200;
-      margin: .5rem 0 1rem;
+      margin: 0.5rem 0 1rem;
       color: var(--color-black); }
     .App .right .pop-up .task-list,
     .App .left .pop-up .task-list {
@@ -390,13 +400,13 @@ button {
         color: var(--color-black); }
         .App .right .pop-up .task-list .task:before,
         .App .left .pop-up .task-list .task:before {
-          content: '';
-          width: .3rem;
-          height: .3rem;
+          content: "";
+          width: 0.3rem;
+          height: 0.3rem;
           border: 1px solid var(--color-main-font);
           position: absolute;
-          left: -.9rem;
-          top: .5rem;
+          left: -0.9rem;
+          top: 0.5rem;
           animation: spin 4s infinite; }
   .App .right .projects,
   .App .right .skills,
@@ -426,78 +436,105 @@ button {
     .App .left .skills .project,
     .App .left .skills .skill {
       transition: 0.1s ease-in-out;
-      margin-bottom: 5rem;
       font-weight: 400;
       font-size: 2rem;
       display: inline;
       position: relative;
       color: var(--color-main-font);
-      cursor: pointer; }
-      .App .right .projects .project .level-container,
-      .App .right .projects .skill .level-container,
-      .App .right .skills .project .level-container,
-      .App .right .skills .skill .level-container,
-      .App .left .projects .project .level-container,
-      .App .left .projects .skill .level-container,
-      .App .left .skills .project .level-container,
-      .App .left .skills .skill .level-container {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        margin-top: .5rem; }
-        .App .right .projects .project .level-container .level,
-        .App .right .projects .skill .level-container .level,
-        .App .right .skills .project .level-container .level,
-        .App .right .skills .skill .level-container .level,
-        .App .left .projects .project .level-container .level,
-        .App .left .projects .skill .level-container .level,
-        .App .left .skills .project .level-container .level,
-        .App .left .skills .skill .level-container .level {
-          height: .5rem;
-          background: var(--color-hover-red);
-          border-radius: .5rem;
-          opacity: 0.3;
-          transition: width 2s ease; }
-        .App .right .projects .project .level-container .level-nr,
-        .App .right .projects .skill .level-container .level-nr,
-        .App .right .skills .project .level-container .level-nr,
-        .App .right .skills .skill .level-container .level-nr,
-        .App .left .projects .project .level-container .level-nr,
-        .App .left .projects .skill .level-container .level-nr,
-        .App .left .skills .project .level-container .level-nr,
-        .App .left .skills .skill .level-container .level-nr {
-          font-size: .7rem;
-          padding-left: .5rem;
-          color: inherit;
-          transition: opacity 1.5s ease; }
-      @media only screen and (min-height: 0px) and (max-height: 768px) {
-        .App .right .projects .project,
-        .App .right .projects .skill,
-        .App .right .skills .project,
-        .App .right .skills .skill,
-        .App .left .projects .project,
-        .App .left .projects .skill,
-        .App .left .skills .project,
-        .App .left .skills .skill {
-          margin-bottom: 2rem; } }
-      .App .right .projects .project:hover,
+      cursor: pointer;
+      letter-spacing: 0;
+      width: fit-content;
+      transition: all 0.5s ease; }
+      .App .right .projects .project:active, .App .right .projects .project:hover,
+      .App .right .projects .skill:active,
       .App .right .projects .skill:hover,
+      .App .right .skills .project:active,
       .App .right .skills .project:hover,
+      .App .right .skills .skill:active,
       .App .right .skills .skill:hover,
+      .App .left .projects .project:active,
       .App .left .projects .project:hover,
+      .App .left .projects .skill:active,
       .App .left .projects .skill:hover,
+      .App .left .skills .project:active,
       .App .left .skills .project:hover,
+      .App .left .skills .skill:active,
       .App .left .skills .skill:hover {
-        color: var(--color-hover-red); }
-        .App .right .projects .project:hover .level-container .level-nr,
-        .App .right .projects .skill:hover .level-container .level-nr,
-        .App .right .skills .project:hover .level-container .level-nr,
-        .App .right .skills .skill:hover .level-container .level-nr,
-        .App .left .projects .project:hover .level-container .level-nr,
-        .App .left .projects .skill:hover .level-container .level-nr,
-        .App .left .skills .project:hover .level-container .level-nr,
-        .App .left .skills .skill:hover .level-container .level-nr {
-          color: #ffff; }
+        letter-spacing: 5px;
+        color: var(--color-cube); }
+      .App .right .projects .project:after, .App .right .projects .project:before,
+      .App .right .projects .skill:after,
+      .App .right .projects .skill:before,
+      .App .right .skills .project:after,
+      .App .right .skills .project:before,
+      .App .right .skills .skill:after,
+      .App .right .skills .skill:before,
+      .App .left .projects .project:after,
+      .App .left .projects .project:before,
+      .App .left .projects .skill:after,
+      .App .left .projects .skill:before,
+      .App .left .skills .project:after,
+      .App .left .skills .project:before,
+      .App .left .skills .skill:after,
+      .App .left .skills .skill:before {
+        backface-visibility: hidden;
+        border: 1px solid rgba(255, 255, 255, 0);
+        bottom: -0.5rem;
+        content: " ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        width: 0; }
+      .App .right .projects .project:hover:after, .App .right .projects .project:hover:before,
+      .App .right .projects .skill:hover:after,
+      .App .right .projects .skill:hover:before,
+      .App .right .skills .project:hover:after,
+      .App .right .skills .project:hover:before,
+      .App .right .skills .skill:hover:after,
+      .App .right .skills .skill:hover:before,
+      .App .left .projects .project:hover:after,
+      .App .left .projects .project:hover:before,
+      .App .left .projects .skill:hover:after,
+      .App .left .projects .skill:hover:before,
+      .App .left .skills .project:hover:after,
+      .App .left .skills .project:hover:before,
+      .App .left .skills .skill:hover:after,
+      .App .left .skills .skill:hover:before {
+        backface-visibility: hidden;
+        border-color: var(--color-brown);
+        transition: width 350ms ease-in-out;
+        width: 50%; }
+      .App .right .projects .project:before,
+      .App .right .projects .skill:before,
+      .App .right .skills .project:before,
+      .App .right .skills .skill:before,
+      .App .left .projects .project:before,
+      .App .left .projects .skill:before,
+      .App .left .skills .project:before,
+      .App .left .skills .skill:before {
+        top: -0.2rem; }
+      .App .right .projects .project:hover:before,
+      .App .right .projects .skill:hover:before,
+      .App .right .skills .project:hover:before,
+      .App .right .skills .skill:hover:before,
+      .App .left .projects .project:hover:before,
+      .App .left .projects .skill:hover:before,
+      .App .left .skills .project:hover:before,
+      .App .left .skills .skill:hover:before {
+        bottom: auto;
+        top: -0.2rem;
+        width: 80%; }
+    .App .right .projects .project,
+    .App .right .skills .project,
+    .App .left .projects .project,
+    .App .left .skills .project {
+      margin: 0 0 5rem auto; }
+    .App .right .projects .skill,
+    .App .right .skills .skill,
+    .App .left .projects .skill,
+    .App .left .skills .skill {
+      margin: 0 auto 5rem 0; }
     @media (max-height: 768px) {
       .App .right .projects .project,
       .App .right .projects .skill,
@@ -508,6 +545,12 @@ button {
       .App .left .skills .project,
       .App .left .skills .skill {
         margin-bottom: 2rem; } }
+    @media (max-width: 991.98px) {
+      .App .right .projects .skill,
+      .App .right .skills .skill,
+      .App .left .projects .skill,
+      .App .left .skills .skill {
+        margin: 0 0 5rem auto; } }
   @media (max-width: 991.98px) {
     .App {
       flex-direction: column; }
@@ -526,12 +569,12 @@ button {
           bottom: 0;
           left: 0;
           right: 0;
-          padding: 5rem 0 .5rem;
+          padding: 5rem 0 0.5rem;
           background: linear-gradient(to top, var(--color-borders) 50%, var(--color-shadow) 100%);
           z-index: 10;
           display: inherit; }
           .App .center .center-container .footer:before {
-            content: '';
+            content: "";
             position: fixed;
             width: 100%;
             top: 0;
